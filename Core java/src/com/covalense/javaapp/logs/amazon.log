@@ -1,0 +1,18 @@
+Jun 17, 2019 12:49:05 PM Com.abc.TestB main
+SEVERE:  hi its a SEVERR message
+Jun 17, 2019 12:49:05 PM Com.abc.TestB main
+WARNING:  hi its a SEVERR message
+Jun 17, 2019 12:49:05 PM Com.abc.TestB main
+INFO:  hi its a SEVERR message
+Jun 17, 2019 12:49:05 PM Com.abc.Register connect
+SEVERE:  hi its a SEVERR message
+Jun 17, 2019 12:49:05 PM Com.abc.Register connect
+WARNING:  hi its a SEVERR message
+Jun 17, 2019 12:49:05 PM Com.abc.Register connect
+INFO:  hi its a SEVERR message
+Jun 17, 2019 12:49:05 PM Com.abc.Login validate
+SEVERE:  hi its a SEVERR message
+Jun 17, 2019 12:49:05 PM Com.abc.Login validate
+WARNING:  hi its a SEVERR message
+Jun 17, 2019 12:49:05 PM Com.abc.Login validate
+INFO:  hi its a SEVERR message
