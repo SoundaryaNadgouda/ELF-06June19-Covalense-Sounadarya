@@ -1,0 +1,23 @@
+body{
+    background-color: blue;
+}
+.heading{
+    color: brown
+   
+}
+#paragraph{
+    padding: 20px
+    
+}
+input[type="username"],input[type="password"]{
+    height: 40px;
+    width: 100px;
+    display: block;
+}
+#box1{
+    height: 20px;
+    background-color: brown;
+    padding: 60px;
+    margin: 50px;
+    border: 10px crimson;
+}

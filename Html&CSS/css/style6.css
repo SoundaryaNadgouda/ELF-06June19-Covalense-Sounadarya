@@ -1,0 +1,37 @@
+body{
+    
+    background-image: linear-gradient(to bottom,red);
+}
+nav{
+    width: 100%;
+    background-color: chocolate;
+}
+ul{
+    margin: 0%;
+}
+li{
+    display: inline;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: brown;
+    padding: 30px;
+    display: inline-block;
+}
+input{
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 40%;
+    border: green;
+}
+input:hover{
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    margin: 40%;
+    border: green;
+    background: olive;
+    box-shadow: 0 0 10px indigo;
+}
