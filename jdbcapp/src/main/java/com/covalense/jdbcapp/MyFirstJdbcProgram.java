@@ -18,12 +18,12 @@ public final class MyFirstJdbcProgram {
 		try {
 //			Driver driver=new Driver();
 //			DriverManager.deregisterDriver(driver);
-			
 			try {
 				Class.forName("com.mysql.jdbc.Driver").newInstance();
 			} catch (InstantiationException |IllegalAccessException|ClassNotFoundException e) {
 				e.printStackTrace();
 			}
+			
 			
 //			String dburl="jdbc:mysql://localhost:3306/covalense?user=root&password=root";
 //			con=DriverManager.getConnection(dburl);
