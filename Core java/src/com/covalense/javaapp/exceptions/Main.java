@@ -4,7 +4,7 @@ import lombok.extern.java.Log;
 public class Main {
 
 	public static void main(String[] args) {
-		Ex2 e2 = new Ex2();
+		ExTwo e2 = new ExTwo();
 		log.info("main started");
 		try {
 			e2.check();

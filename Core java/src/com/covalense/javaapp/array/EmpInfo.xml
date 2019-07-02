@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emp-info>
+			<emp_id>123
+			</emp_id>
+			<emp_name>soundarya</emp_name>
+			<emp_age>23</emp_age>
+			<emp_designation>trainee software engineer</emp_designation>
+			<emp_mail>soundaryaan@gmail.com</emp_mail>
+			<emp_adress>
+			        <addr_type>present</addr_type>
+			      <addr1>1st c main rd</addr1>
+		           	<addr2>2nd cross 2nd c main rd</addr2>
+			       <landmark>near mico layout</landmark>
+			       <city>bangalore</city>
+			       <state>karnataka</state>
+			   <pincode>560064</pincode>
+		</emp_adress>
+		     <welcome_message>
+		         &gt;html&lt;
+		                      &gt;b&lt; &gt;u&lt; &gt;i&lt;welcome !!!&lt;/i>&gt;/u>&lt;/b&lt;
+		        &gt;/html&lt;
+		 </welcome_message>
+		 <welcome_message>
+		 <![CDATA[
+		 <html><b><u><i> welcome to company
+		 ]]>
+		  </welcome_message>
+</emp-info>

@@ -54,6 +54,6 @@ public class Car implements  Comparable<Car>{
 			return false;
 		}
 		return  (Double.doubleToLongBits(rating) != Double.doubleToLongBits(other.rating)) ;
-	}
+	}                                                                   
 }
 	

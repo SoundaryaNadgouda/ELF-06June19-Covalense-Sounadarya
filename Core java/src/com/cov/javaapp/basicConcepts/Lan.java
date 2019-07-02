@@ -1,4 +1,4 @@
-package com.cov.javaapp.basicConcepts;
+package com.cov.javaapp.basicconcepts;
 
 import lombok.extern.java.Log;
 

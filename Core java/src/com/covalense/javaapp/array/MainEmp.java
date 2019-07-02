@@ -6,7 +6,7 @@ import lombok.extern.java.Log;
 public class MainEmp {
 
 	public static void main(String[] args) {
-		Emp e[] = new Emp[4];
+		Emp []e = new Emp[4];
 
 		Emp e1 = new Emp();
 		e1.setName("soundarya");

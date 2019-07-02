@@ -8,7 +8,7 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-import com.covalense.javaapp.exceptions.Ex2;
+import com.covalense.javaapp.exceptions.ExTwo;
 
 import lombok.extern.java.Log;
 @Log

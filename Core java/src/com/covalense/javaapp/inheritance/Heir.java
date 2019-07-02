@@ -1,5 +1,4 @@
 package com.covalense.javaapp.inheritance;
-import com.covalense.javaapp.exceptions.Ex2;
 
 import lombok.extern.java.Log;
 @Log
