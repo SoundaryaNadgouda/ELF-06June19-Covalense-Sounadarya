@@ -2,27 +2,27 @@ package com.covalense.jdbcapp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import com.mysql.jdbc.Driver;
+
 import lombok.extern.java.Log;
 
 @Log
-public final class MyFirstJdbcProgram {
+public final class PreparedStatementExampleTwo {
 
 	public static void main(String[] args) {
 		Connection con=null;
-		Statement stmt=null;
+		PreparedStatement pstmt=null;
 		ResultSet rs=null;
-
+				
 		try {
 //			Driver driver=new Driver();
 //			DriverManager.deregisterDriver(driver);
 			try {
 				Class.forName("com.mysql.jdbc.Driver").newInstance();
 			} catch (InstantiationException |IllegalAccessException|ClassNotFoundException e) {
-				e.printStackTrace();
+				log.info(" ");
 			}
 			
 			
@@ -34,16 +34,17 @@ public final class MyFirstJdbcProgram {
 			
 			log.info("Connection Impl class =======>"+con.getClass());
 			
-			String query="select * from empinfo";
-			stmt=con.createStatement();
-			rs=stmt.executeQuery(query);
+			String query="select * from empinfo "
+					+"where id=? "
+					+" and managerid=? ";
+			pstmt=con.prepareStatement(query);
+			pstmt.setInt(1, Integer.parseInt(args[0]));
+			pstmt.setInt(2, Integer.parseInt(args[1]));
+			rs=pstmt.executeQuery();
 			
 			while(rs.next()) {
-//				log.info(" Id   ===>"+rs.getInt("Id"));
-//				log.info("Name    ===>"+rs.getString("Name"));
-				
-				log.info(" Id   ===>"+rs.getInt(1));
-				log.info("Name    ===>"+rs.getString(2));
+				log.info(" Id   ===>"+rs.getInt("Id"));
+				log.info("Name    ===>"+rs.getString("Name"));
 				log.info("Age    ===>"+rs.getInt("Age"));
 				log.info("Gender      ===>"+rs.getString("Gender"));
 				log.info(" salary   ===>"+rs.getDouble("Salary"));
@@ -57,23 +58,22 @@ public final class MyFirstJdbcProgram {
 				log.info("Manager_Id     ===>"+rs.getInt("managerid"));
 						
 			}
+			
 		} catch (SQLException e) {
 			log.info(" ");
 		}finally {
 				try {
-					
-					if(con!=null) {
+					if(con!=null)
 					con.close();
-				} 
-					if(stmt!=null) {
-						stmt.close();
+					if(pstmt!=null) {
+						pstmt.close();
 						if(rs!=null) {
 							rs.close();
 						}
 					}
 				}
 				catch (SQLException e) {
-				e.printStackTrace();
+					log.info(" ");
 				}
 				
 					}
