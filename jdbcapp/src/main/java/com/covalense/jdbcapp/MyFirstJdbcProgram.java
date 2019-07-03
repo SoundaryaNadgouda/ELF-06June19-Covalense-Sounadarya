@@ -15,6 +15,7 @@ public final class MyFirstJdbcProgram {
 		Connection con=null;
 		Statement stmt=null;
 		ResultSet rs=null;
+
 		try {
 //			Driver driver=new Driver();
 //			DriverManager.deregisterDriver(driver);
@@ -30,6 +31,8 @@ public final class MyFirstJdbcProgram {
 			
 			String dburl="jdbc:mysql://localhost:3306/covalense";
 			con=DriverManager.getConnection(dburl, "root", "root");
+			
+			log.info("Connection Impl class =======>"+con.getClass());
 			
 			String query="select * from empinfo";
 			stmt=con.createStatement();
@@ -52,7 +55,7 @@ public final class MyFirstJdbcProgram {
 						
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
+			log.info(" ");
 		}finally {
 				try {
 					if(con!=null) {
