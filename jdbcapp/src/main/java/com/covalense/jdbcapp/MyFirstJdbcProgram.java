@@ -18,7 +18,7 @@ public final class MyFirstJdbcProgram {
 
 		try {
 //			Driver driver=new Driver();
-//			DriverManager.deregisterDriver(driver);
+	//		DriverManager.deregisterDriver(driver);
 			try {
 				Class.forName("com.mysql.jdbc.Driver").newInstance();
 			} catch (InstantiationException |IllegalAccessException|ClassNotFoundException e) {
@@ -39,11 +39,8 @@ public final class MyFirstJdbcProgram {
 			rs=stmt.executeQuery(query);
 			
 			while(rs.next()) {
-//				log.info(" Id   ===>"+rs.getInt("Id"));
-//				log.info("Name    ===>"+rs.getString("Name"));
-				
-				log.info(" Id   ===>"+rs.getInt(1));
-				log.info("Name    ===>"+rs.getString(2));
+			log.info(" Id   ===>"+rs.getInt("Id"));
+			log.info("Name    ===>"+rs.getString("Name"));
 				log.info("Age    ===>"+rs.getInt("Age"));
 				log.info("Gender      ===>"+rs.getString("Gender"));
 				log.info(" salary   ===>"+rs.getDouble("Salary"));
