@@ -17,6 +17,7 @@ public class SaveDemo {
 
 		SessionFactory factory = cfg.buildSessionFactory();
 		Session session = factory.openSession();
+		
 		/*
 		 * EmpInfoBean empInf = new EmpInfoBean(); empInf.setId(15);
 		 * empInf.setName("nadgouda"); empInf.setAge(20); empInf.setSalary(50500);
@@ -27,11 +28,11 @@ public class SaveDemo {
 		 * empInf.setDesignation("pilot"); empInf.setEmail("manoj@gmail.com"); Date
 		 * dateOne=format.parse("2018-08-03"); empInf.setJoiningDate(dateOne);
 		 * empInf.setManagerid(112);
+		 * 
 		 */
-		
 		DepartmentInfoBean deptInf=new DepartmentInfoBean();
-		deptInf.setDeptid(17);
-		deptInf.setDeptName("accounting");
+		deptInf.setDeptid(16);
+		deptInf.setDeptName("testing");
 		
 		
 		
