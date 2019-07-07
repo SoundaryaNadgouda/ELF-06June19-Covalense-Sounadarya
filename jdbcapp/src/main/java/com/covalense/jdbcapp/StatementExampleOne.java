@@ -5,24 +5,25 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
 import com.mysql.jdbc.Driver;
 import lombok.extern.java.Log;
 
 @Log
-public final class MyFirstJdbcProgram {
+public final class StatementExampleOne {
 
 	public static void main(String[] args) {
 		Connection con=null;
 		Statement stmt=null;
 		ResultSet rs=null;
-
+				
 		try {
 //			Driver driver=new Driver();
-	//		DriverManager.deregisterDriver(driver);
+//			DriverManager.deregisterDriver(driver);
 			try {
 				Class.forName("com.mysql.jdbc.Driver").newInstance();
 			} catch (InstantiationException |IllegalAccessException|ClassNotFoundException e) {
-				e.printStackTrace();
+				log.info(" ");
 			}
 			
 			
@@ -34,13 +35,13 @@ public final class MyFirstJdbcProgram {
 			
 			log.info("Connection Impl class =======>"+con.getClass());
 			
-			String query="select * from empinfo";
+			String query="select * from empinfo where id=1";
 			stmt=con.createStatement();
 			rs=stmt.executeQuery(query);
 			
-			while(rs.next()) {
-			log.info(" Id   ===>"+rs.getInt("Id"));
-			log.info("Name    ===>"+rs.getString("Name"));
+			if(rs.next()) {
+				log.info(" Id   ===>"+rs.getInt("Id"));
+				log.info("Name    ===>"+rs.getString("Name"));
 				log.info("Age    ===>"+rs.getInt("Age"));
 				log.info("Gender      ===>"+rs.getString("Gender"));
 				log.info(" salary   ===>"+rs.getDouble("Salary"));
@@ -58,7 +59,6 @@ public final class MyFirstJdbcProgram {
 			log.info(" ");
 		}finally {
 				try {
-					
 					if(con!=null) {
 					con.close();
 				} 
@@ -70,7 +70,7 @@ public final class MyFirstJdbcProgram {
 					}
 				}
 				catch (SQLException e) {
-				e.printStackTrace();
+					log.info(" ");
 				}
 				
 					}
