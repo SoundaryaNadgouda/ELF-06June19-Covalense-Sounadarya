@@ -1,31 +1,24 @@
 package com.covalense.designpattern;
 
-import java.util.ArrayList;
-
 import com.covalense.designpattern.beans.EmpInfoBean;
 import com.covalense.designpattern.dao.EmployeeDAO;
 import com.covalense.designpattern.dao.EmployeeDAOFactory;
-import com.covalense.designpattern.dao.EmployeeDAOHibernateImpl;
-import com.covalense.designpattern.dao.EmployeeDAOHibernateImpl2;
-
 import lombok.extern.java.Log;
 
 @Log
 
 public class DesignPatternTest {
 	public static void main(String[] args) {
-		// EmployeeDAO dao = new EmployeeDAOJDBCImpl();
-		EmployeeDAO dao = new EmployeeDAOHibernateImpl2();
-		// EmployeeDAO dao = EmployeeDAOFactory.getInstance();
-		/*
-		 * printInfo(dao.getEmployeeInfo(1)); printInfo(dao.getEmployeeInfo("2"));
-		 */
+//		EmployeeDAO dao = new EmployeeDAOJDBCImpl();
+//		EmployeeDAO dao = new EmployeeDAOHibernateImpl();
+		EmployeeDAO dao = EmployeeDAOFactory.getInstance();
+		printInfo(dao.getEmployeeInfo(1));
+		printInfo(dao.getEmployeeInfo("2"));
 
-		ArrayList<EmpInfoBean> beans = dao.getAllEmployeeInfo();
-		for (EmpInfoBean bean : beans) {
-			printInfo(bean);
-			log.info("printed");
-		}
+		/*
+		 * ArrayList<EmpInfoBean> beans = dao.getAllEmployeeInfo(); for (EmpInfoBean
+		 * bean : beans) { printInfo(bean); }
+		 */
 
 		// create an EmployeeInfo
 		EmpInfoBean empInf = new EmpInfoBean();
@@ -40,8 +33,8 @@ public class DesignPatternTest {
 		empInf.setDesignation("pilot");
 		empInf.setEmail("manoj@gmail.com");
 		empInf.setManagerid(112);
-		// log.info(" "+dao.createEmpInfo(empInf));
-		//log.info(" " + dao.deleteEmpInfo(8));
+		//log.info(" "+dao.createEmpInfo(empInf));
+	log.info(" "+dao.deleteEmpInfo(8));	
 	}
 
 	private static void printInfo(EmpInfoBean bean) {

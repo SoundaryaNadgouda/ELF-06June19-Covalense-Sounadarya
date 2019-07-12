@@ -1,27 +1,18 @@
 package com.covalense.designpattern.dao;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 
 import com.covalense.designpattern.beans.EmpInfoBean;
 import com.covalense.designpattern.util.HibernateUtil;
 
-import lombok.extern.java.Log;
-@Log
 public class EmployeeDAOHibernateImpl2 implements EmployeeDAO {
-	public ArrayList<EmpInfoBean> getAllEmployeeInfo() {
-		Session session = HibernateUtil.openSession();
-		 String hql="from EmpInfoBean"; 
-		Query query=session.createQuery(hql);
-		 ArrayList<EmpInfoBean> empInfoBeans=(ArrayList<EmpInfoBean>) query.list();
-		return empInfoBeans;
-
-	
+	public ArrayList<EmpInfoBean
+	> getAllEmployeeInfo() {
+		// To Do
+		return null;
 	}
 	public EmpInfoBean getEmployeeInfo(String id) {
 		return getEmployeeInfo(Integer.parseInt(id));

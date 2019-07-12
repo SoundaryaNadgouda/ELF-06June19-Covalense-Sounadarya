@@ -1,27 +1,23 @@
 package com.covalense.designpattern.dao;
 
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 
-import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
 
 import com.covalense.designpattern.beans.EmpInfoBean;
-import lombok.extern.java.Log;
 
-@Log
+
 public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
-	public ArrayList<EmpInfoBean> getAllEmployeeInfo() {
+	public ArrayList<EmpInfoBean
+	> getAllEmployeeInfo() {
+		// To Do
 		return null;
-		
 	}
 
 	public EmpInfoBean getEmployeeInfo(String id) {

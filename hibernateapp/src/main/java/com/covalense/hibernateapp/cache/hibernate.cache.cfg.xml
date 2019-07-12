@@ -11,8 +11,10 @@
         <property name="hibernate.connection.pool_size">1</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
- <!--  <mapping class="com.covalense.hibernateapp.dto.EmpInfoBean" /> 
-       <mapping class="com.covalense.hibernateapp.dto.EmpNewInfo" />   -->
+        <property name="hibernate.format_sql">true</property>
+       <property name="hibernate.cache.use_second_level_cache">true</property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+ 
+       <mapping class="com.covalense.hibernateapp.cache.EmpNewInfo" />  
     </session-factory>
 </hibernate-configuration>

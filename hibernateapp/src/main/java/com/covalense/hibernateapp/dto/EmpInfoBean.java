@@ -8,12 +8,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+
 import lombok.Data;
 @Entity
 @Table(name="empinfo")
 @Data
 
 public class EmpInfoBean implements Serializable{
+	
+	
 		@Id
 		@Column(name="id")
 	private int id ;	
