@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-<!--         <property name="hibernate.connection.url">jdbc:mysql://mysqlsoundarya.cdejzmhrk26n.ap-south-1.rds.amazonaws.com:3306/mysqlsoundarya</property> -->
+<!--         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/covalense</property> -->
   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/covalense</property> 
         <property name="hibernate.connection.username">root</property>
 <!--         <property name="hibernate.connection.password">Soundaryaan1996</property> -->

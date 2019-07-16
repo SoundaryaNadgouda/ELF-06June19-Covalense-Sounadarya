@@ -1,8 +1,12 @@
+
 package com.covalense.mywebapp.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,14 +23,20 @@ public  class MyFirstServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
 			throws ServletException, IOException {
 		
-		String httpMethod=req.getMethod();
-		String protocol=req.getProtocol();
-		String requestUrl=req.getRequestURI().toString();
-		
-		log.info("Http method==>"+httpMethod);
-		log.info("Protocol====>"+protocol);
-		log.info("Url ====>"+requestUrl);
-		
+		  ServletContext ctx=getServletContext(); String
+		  movieName=ctx.getInitParameter("movie");
+		  
+		  ServletConfig config=getServletConfig(); String
+		  actorName=config.getInitParameter("actor");
+		 
+		/*
+		 * String httpMethod=req.getMethod(); String protocol=req.getProtocol(); String
+		 * requestUrl=req.getRequestURI().toString();
+		 * 
+		 * log.info("Http method==>"+httpMethod); log.info("Protocol====>"+protocol);
+		 * log.info("Url ====>"+requestUrl);
+		 * 
+		 */
 		String currentDateTime =new Date().toString();
 		
 		//Get query string information
@@ -48,6 +58,10 @@ public  class MyFirstServlet extends HttpServlet{
 			"first name : "+fnameValue+
 			"<br><br>"+
 			"lname  : "+lnameValue+
+				
+				  "<br><br>"+ "movie name : "+movieName+ "<br><br>"+
+				  "actor name  : "+actorName+
+				 
 			" </h1> "+
 		"</body> "+
 		"</html> ";

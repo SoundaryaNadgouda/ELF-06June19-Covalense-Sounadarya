@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import java.io.PrintWriter;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,6 +20,16 @@ public class EmployeeSearchServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
+		
+		  ServletContext ctx=getServletContext(); String
+		  movieName=ctx.getInitParameter("movie");
+		  
+		  ServletConfig config=getServletConfig(); String
+		  actorName=config.getInitParameter("actor");
+		 
+		
 		String idValue = req.getParameter("id");
 		EmployeeDAO dao = EmployeeDAOFactory.getInstance();
 		EmpInfoBean bean=dao.getEmployeeInfo(idValue);
@@ -44,6 +56,11 @@ public class EmployeeSearchServlet extends HttpServlet {
 			out.println("<br>" + bean.getId());
 			out.println("<br>" + bean.getJoiningDate());
 			out.println("<br>" + bean.getManagerid());
+			
+			
+			  out.println("<br> movie name :"+movieName);
+			  out.println("<br> actor name :"+actorName);
+			 
 			out.println("<br>" + bean.getPhone());
 			out.println("<br>" + bean.getSalary());
 			out.print("</body> ");
