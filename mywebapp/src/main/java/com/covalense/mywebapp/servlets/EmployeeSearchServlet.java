@@ -22,7 +22,6 @@ public class EmployeeSearchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		
-		
 		  ServletContext ctx=getServletContext(); String
 		  movieName=ctx.getInitParameter("movie");
 		  
@@ -39,12 +38,13 @@ public class EmployeeSearchServlet extends HttpServlet {
 		if(bean==null) {
 			out.print(	"<html>");
 			out.print(	"<body>");	
-			out.print(	"employee not found");		
+			out.print(	"EmployeeInfoBean object not found");		
 			out.print("</body> ");
 			out.print("</html> ");
 		}else {
 			out.print(	"<html>");
 			out.print(	"<body>");	
+			out.print(	"EmployeeInfoBean object found");	
 			out.println("<br>"+ bean.getDesignation());
 			out.println("<br>"+bean.getEmail());
 			out.println("<br>"+bean.getGender());
@@ -66,5 +66,24 @@ public class EmployeeSearchServlet extends HttpServlet {
 			out.print("</body> ");
 			out.print("</html> ");
 		}
+		//Get object from Forward Servlet
+		//EmpInfoBean infoBean=(EmpInfoBean)req.getAttribute("info");
+		EmpInfoBean infoBean=(EmpInfoBean)ctx.getAttribute("info");
+		if(infoBean==null) {
+			out.print(	"<html>");
+			out.print(	"<body>");	
+			out.print(	"EmployeeInfoBean object not found");		
+			out.print("</body> ");
+			out.print("</html> ");
+		}else {
+			out.print(	"<html>");
+			out.print(	"<body>");	
+			out.print(	"EmployeeInfoBean object found");	
+			out.println("<br>"+infoBean.getGender());
+			out.println("<br>" + infoBean.getAge());
+			out.println("<br>" +infoBean.getId());
+			out.print("</body> ");
+			out.print("</html> ");
 	}
+}
 }
