@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Editor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/frontend assessment/Real Time Editor.css">
+</head>
+<body style="background-color: olive">
+    <div class="row container-position">
+        <div class="col-6">
+            <h3>HTML Editor</h3>
+            <textarea onkeyup='updateview();' onchange='updateview();' onkeydown='updateview();' oninput='updateview();' autofocus placeholder='Enter HTML and Javascript code.'  id='edit' onload='updateview();' class="text-style"><h2>Instant html editor is great!</h2>
+            </textarea>
+        </div>
+        <div class="col-6">
+            <h3>Output Page</h3>
+            <iframe id='view' class="frame-style"></iframe>
+        </div>
+    </div>
+    <script src="/frontend assessment/Real Time Editor.js"></script>
+</body>
+</html>
