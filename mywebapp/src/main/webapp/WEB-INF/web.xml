@@ -2,15 +2,46 @@
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
+ <web-app>
   <display-name>Archetype Created Web Application</display-name>
   
-  <context-param>
+   <!--  <servlet>
+  <servlet-name>MyJsp</servlet-name>
+<jsp-file>/MyFirstJsp.jsp</jsp-file>
+  </servlet> -->
+  
+ <!--  <servlet>
+  <servlet-name>LoginJsp</servlet-name>
+<jsp-file>/Login.jsp</jsp-file>
+  </servlet>
+    -->
+   
+  
+<!--   <init-param> -->
+<!--   <param-name>actor</param-name> -->
+<!--   <param-value>manoj</param-value> -->
+<!--   </init-param> -->
+
+  
+ <!--  <servlet-mapping>
+  <servlet-name>MyJsp</servlet-name>
+  <url-pattern>/currentDatejsp</url-pattern>
+  </servlet-mapping>  -->
+  
+<!--   <servlet-mapping> -->
+<!--   <servlet-name>LoginJsp</servlet-name> -->
+<!--   <url-pattern>/Loginjsp</url-pattern> -->
+<!--   </servlet-mapping>  -->
+  
+  
+  </web-app>
+  
+ <!--  <context-param>
   <param-name>movie</param-name>
   <param-value>lion king</param-value>
-  </context-param>
+  </context-param> -->
   
-  <servlet>
+<!--   <servlet>
   <servlet-name>MyFirstServlet</servlet-name>
   <servlet-class>com.covalense.mywebapp.servlets.MyFirstServlet</servlet-class>
   <init-param>
@@ -19,9 +50,9 @@
   </init-param>
   </servlet>
   
-<!--   <servlet-mapping> -->
-<!--   <servlet-name>EmployeeSearchServlet</servlet-name> -->
-<!--   <url-pattern>/employee</url-pattern> -->
-<!--   </servlet-mapping> -->
-</web-app>
+  <servlet-mapping>
+  <servlet-name>EmployeeSearchServlet</servlet-name>
+  <url-pattern>/employee</url-pattern>
+  </servlet-mapping> -->
+
 

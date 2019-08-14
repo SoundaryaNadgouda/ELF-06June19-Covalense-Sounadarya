@@ -16,7 +16,7 @@ import com.covalense.mywebapp.beans.EmpInfoBean;
 import com.covalense.mywebapp.dao.EmployeeDAO;
 import com.covalense.mywebapp.dao.EmployeeDAOFactory;
 
-@WebServlet("/create")
+@WebServlet("/createem")
 public class CreateEmployeeServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
