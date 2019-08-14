@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	 <!-- bean definitions here <bean id="messageBean" class="com.covalense.springcore.beans.MessageBean"> 
+		<property name="message" value="welcome"> -->
+<!-- 
+	 <bean id="employee" class="com.covalense.springcore.beans.EmpInfoBean" 
+		autowire="byName"> <property name="name" value="soundarya"></property> <property 
+		name="id" value="11"> </property> <property name="deptBean" ref="department"></property> 
+		</bean> 
+
+	<bean id="employee"
+		class="com.covalense.springcore.beans.EmpInfoBean" autowire="constructor">
+		<constructor-arg name="name" value="soujanya"></constructor-arg>
+		<constructor-arg name="id" value="111">
+		</constructor-arg>
+	</bean>
+ -->
+	<bean id="deptBean"
+		class="com.covalense.springcore.beans.DeptBean" primary="true">
+		<property name="deptName" value="ise"></property>
+		<property name="deptId" value="2">
+		</property>
+	</bean>
+
+	<bean id="deptBean1"
+		class="com.covalense.springcore.beans.DeptBean">
+		<property name="deptName" value="cse"></property>
+		<property name="deptId" value="1">
+		</property>
+	</bean>
+
+
+</beans>
