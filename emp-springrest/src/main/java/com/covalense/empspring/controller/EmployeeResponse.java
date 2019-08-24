@@ -13,9 +13,12 @@ import lombok.Data;
 @JsonRootName("employee-response")
 public class EmployeeResponse {
 
-	@JsonProperty("status-code")
+	@JsonProperty("statusCode")
 	private int statusCode;
 	private String message;
 	private String description;
 	private  List<EmpInfoBean> beans;
 }
+
+
+

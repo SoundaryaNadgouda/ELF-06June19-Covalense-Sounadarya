@@ -1,4 +1,9 @@
-<%@page import="com.covalense.emp.dto.EmpInfoBean"%><html>
+<%@page import="org.springframework.web.servlet.support.ServletUriComponentsBuilder"%>
+<%@page import="com.covalense.emp.dto.EmpInfoBean"%>
+<%
+String baseURL=ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString();
+%>
+<html>
 <head>
 <meta charset='UTF-8'>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +62,7 @@
 				<span class="logout">Edit</span>
 			</div>
 			<div class="search col-2">
-				<form action="../validator/validate/employee/search" method="Get">
+				<form action="<%=baseURL%>/validator/validate/employee/search" method="Get">
 					<input type="text" placeholder="Search" name="id" />
 				</form>
 			</div>
@@ -78,9 +83,9 @@
 		<div class="data-display">Age:${bean.getAge()}</div>
 		<div class="data-display">Designation:${bean.getDesignation()}
 		</div>
-		<div class="data-display">Department Id:
-			${bean.getDeptid()}</div>
-		<div class="data-display">Manager Id:${bean.getManagerid()}</div>
+		<div class="data-display">Department Id:11
+			</div>
+		<div class="data-display">Manager Id:111</div>
 		<div class="data-display">Phone:${bean.getPhone()}</div>
 		<div class="data-display">Gender:${bean.getGender()}</div>
 		<div class="data-display">Date of birth:${bean.getDob()}</div>
